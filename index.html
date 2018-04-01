@@ -195,7 +195,8 @@
               <br>
               <div id="success"></div>
               <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-xl" id="sendMessageButton">Send</button>
+                <button type="submit" class="btn btn-primary btn-xl" 
+                        id="sendMessageButton" onClick="redirect();">Send</button>
               </div>
             </form>
           </div>
@@ -412,6 +413,17 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/freelancer.min.js"></script>
+    
+    <script>
+      function redirect()
+      {
+        var name = document.getElementById('name').value;
+        var number = document.getElementById('phone').value;
+        var message = document.getElementById('message').value;
+        window.location="mailto:bjwiens@hotmail.com?Subject=Contact From "
+          + name + " " + number +"&body=" + message;
+      }
+    </script
 
   </body>
 
